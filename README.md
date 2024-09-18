@@ -33,8 +33,6 @@ export default defineConfig({
 })
 //////////////////////////////////////////////////
 
-> npm install --save-dev gh-pages
-
 Open package.json and change script to
 //////////////////////////////////////////////////
 "scripts": {
@@ -42,9 +40,12 @@ Open package.json and change script to
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run release",
+    "release": "npm run build && gh release create $(date +%Y%m%d%H%M%S) dist --title 'Release $(date +%Y%m%d%H%M%S)' --notes 'Automated Release'"
   }
 //////////////////////////////////////////////////
+
+> npm install --save-dev github-release-cli
 
 > npm run build
 > npm run deploy

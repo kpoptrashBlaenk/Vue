@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "npm run release",
+    "release": "npm run build && gh release create $(date +%Y%m%d%H%M%S) dist --title 'Release $(date +%Y%m%d%H%M%S)' --notes 'Automated Release'"
   },
   "dependencies": {
     "vue": "^3.4.37"
@@ -14,6 +17,7 @@
   "devDependencies": {
     "@types/vue": "^1.0.31",
     "@vitejs/plugin-vue": "^5.1.2",
+    "github-release-cli": "^2.1.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.1",
     "vue-tsc": "^2.0.29"
