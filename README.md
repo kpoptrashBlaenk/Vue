@@ -80,5 +80,7 @@ You very probably didn't place this in a repo and even if, you didn't commit bef
 ### Conclusion
 
 This will create a branch named 'gh-pages'.
+
 Go to the repo on Github > Settings > Pages then select the branch gh-pages as source and save.
+
 The page will be accessible on https://username.github.io/repo-name/
