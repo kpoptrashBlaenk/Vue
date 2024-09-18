@@ -28,6 +28,7 @@ to solve intellisense not finding vue modules.
 ## Creating a dist for github-pages:
 
 Open vite.config.ts and add base: '/<repo-name>'
+
 //////////////////////////////////////////////////
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -36,9 +37,11 @@ export default defineConfig({
   plugins: [vue()],
   base: '/<repo-name>'
 })
+
 //////////////////////////////////////////////////
 
 Open package.json and change script to
+
 //////////////////////////////////////////////////
 "scripts": {
     "dev": "vite",
@@ -47,6 +50,7 @@ Open package.json and change script to
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   }
+
 //////////////////////////////////////////////////
 
 > npm run build
