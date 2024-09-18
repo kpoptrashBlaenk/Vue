@@ -4,6 +4,8 @@ Here I learn how to use Vue.ts and how to build and deploy to make it accessible
 
 ## Initialization
 
+### Create and run project
+
 Need node-js for this:
 ```bash
 npm init vite@latest FOLDERNAME --template vue
@@ -18,6 +20,8 @@ npm run dev
 ```
 This runs now locally.
 
+### Fix intellisense
+
 create shims-vue.d.ts in src folder and paste this:
 ```typescript
 declare module '*.vue' {
@@ -30,6 +34,8 @@ to solve intellisense not finding vue modules.
 
 
 ## Creating a dist for github-pages:
+
+### Adjust files
 
 Open vite.config.ts and add base: '/<repo-name>'
 ```typescript
@@ -53,6 +59,8 @@ Open package.json and change script to
   }
 ```
 
+### Build and Deploy
+
 ```bash
 npm run build
 ```
@@ -67,6 +75,8 @@ Build will create .vue.js files for some reason, to remove them do:
 git restore .
 git clean -f
 ```
+
+### Conclusion
 
 This will create a branch named 'gh-pages'.
 Go to the repo on Github > Settings > Pages then select the branch gh-pages as source and save.
