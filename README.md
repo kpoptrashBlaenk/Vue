@@ -1,6 +1,4 @@
 Need node-js for this:
-> node -v
-> npm -v
 
 > npm init vite@latest FOLDERNAME --template vue
 > Vue
@@ -22,7 +20,7 @@ to solve intellisense not finding vue modules
 
 
 
-Uploading to Github Pages:
+Creating a dist for github pages:
 
 Open vite.config.ts and add base: / in defineConfig (usually it's <rep-name> but github-pages doesn't use a subfolder since i's its own site)
 //////////////////////////////////////////////////
