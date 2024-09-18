@@ -37,15 +37,14 @@ Open package.json and change script to
 //////////////////////////////////////////////////
 "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "npm run release",
-    "release": "npm run build && gh release create $(date +%Y%m%d%H%M%S) dist --title 'Release $(date +%Y%m%d%H%M%S)' --notes 'Automated Release'"
+    "deploy": "gh-pages -d dist"
   }
 //////////////////////////////////////////////////
 
-> npm install --save-dev github-release-cli
-
 > npm run build
+
+> npm install --save-dev gh-pages
 > npm run deploy

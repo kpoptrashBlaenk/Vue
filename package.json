@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "npm run release",
-    "release": "npm run build && gh release create $(date +%Y%m%d%H%M%S) dist --title 'Release $(date +%Y%m%d%H%M%S)' --notes 'Automated Release'"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "vue": "^3.4.37"
