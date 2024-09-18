@@ -48,3 +48,7 @@ Open package.json and change script to
 
 > npm install --save-dev gh-pages
 > npm run deploy
+
+Build will create .vue.js files for some reason, to remove them do:
+> git restore .
+> git clean -f
