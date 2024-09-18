@@ -1,12 +1,17 @@
-Need node-js for this:
+# Vue.ts with Vite on Github Pages
 
+Here I learn how to use Vue.ts and how to build and deploy to make it accessible via Github Pages.
+
+## Initialization
+
+Need node-js for this:
 > npm init vite@latest FOLDERNAME --template vue
 > Vue
 > TypeScript
 > cd FOLDERNAME
 > npm install
 > npm run dev
-
+This runs now locally.
 
 create shims-vue.d.ts in src folder and paste this:
 //////////////////////////////////////////////////
@@ -16,20 +21,20 @@ declare module '*.vue' {
     export default component
   }
 //////////////////////////////////////////////////
-to solve intellisense not finding vue modules
+to solve intellisense not finding vue modules.
 
 
 
-Creating a dist for github pages:
+## Creating a dist for github-pages:
 
-Open vite.config.ts and add base: /<rep-name>
+Open vite.config.ts and add base: '/<repo-name>'
 //////////////////////////////////////////////////
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/<rep-name>'
+  base: '/<repo-name>'
 })
 //////////////////////////////////////////////////
 
@@ -52,3 +57,7 @@ Open package.json and change script to
 Build will create .vue.js files for some reason, to remove them do:
 > git restore .
 > git clean -f
+
+This will create a branch named 'gh-pages'.
+Go to the repo on Github > Settings > Pages then select the branch gh-pages as source and save.
+The page will be accessible on https://<username>.github.io/<repo-name>/
