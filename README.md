@@ -24,7 +24,7 @@ to solve intellisense not finding vue modules
 
 Uploading to Github Pages:
 
-Open vite.config.ts and add base: / in defineConfig (usually it's <rep-name> but github-pages doesnt use a subfolder sincie i's its own site)
+Open vite.config.ts and add base: / in defineConfig (usually it's <rep-name> but github-pages doesn't use a subfolder since i's its own site)
 //////////////////////////////////////////////////
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
