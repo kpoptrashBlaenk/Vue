@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/vue": "^1.0.31",
     "@vitejs/plugin-vue": "^5.1.2",
+    "gh-pages": "^6.1.1",
     "github-release-cli": "^2.1.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.1",

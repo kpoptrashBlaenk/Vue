@@ -22,14 +22,14 @@ to solve intellisense not finding vue modules
 
 Creating a dist for github pages:
 
-Open vite.config.ts and add base: / in defineConfig (usually it's <rep-name> but github-pages doesn't use a subfolder since i's its own site)
+Open vite.config.ts and add base: /<rep-name>
 //////////////////////////////////////////////////
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/'
+  base: '/<rep-name>'
 })
 //////////////////////////////////////////////////
 
