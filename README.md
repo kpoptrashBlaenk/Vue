@@ -22,7 +22,7 @@ This runs now locally.
 
 ### Fix intellisense
 
-create shims-vue.d.ts in src folder and paste this:
+Create shims-vue.d.ts in src folder and paste this:
 ```typescript
 declare module '*.vue' {
     import { DefineComponent } from 'vue'
@@ -31,6 +31,18 @@ declare module '*.vue' {
   }
 ```
 to solve intellisense not finding vue modules.
+
+### Enhance HTTP Requests
+
+Install Axios:
+```bash
+npm install axios
+```
+
+Import Axios with:
+```typescript
+import axios from 'axios'
+```
 
 
 ## Creating a dist for github-pages:

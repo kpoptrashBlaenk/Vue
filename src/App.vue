@@ -19,6 +19,7 @@ import SlotComp from './components/Tutorial/slots/SlotComp.vue';
 import ScopedSlot from './components/Tutorial/slots/ScopedSlot.vue';
 import DynamicComponents from './components/Tutorial/DynamicComponents/DynamicComponents.vue'
 import Teleportation from './components/Tutorial/Teleport.vue'
+import HttpText from './components/Tutorial/http requests/HttpText.vue'
 
 const background = true;
 
@@ -107,4 +108,5 @@ const componentCompName = 'comp-one'
   <ScopedSlot />
   <DynamicComponents :toggle-value="componentToggleValue" :comp-name="componentCompName" />
   <Teleportation />
+  <HttpText />
 </template>
