@@ -1,7 +1,14 @@
+<script setup lang="ts">
+
+defineOptions({
+    name: 'comp-two'
+})
+</script>
+
 <template>
     <div>
         <h2>Two!</h2>
-        <p>This is component two.</p>
+        Excluded: <input type="checkbox">
     </div>
 </template>
 

@@ -1,19 +1,19 @@
 <script setup lang="ts">
 
 defineOptions({
-    name: 'comp-one'
+    name: 'comp-three'
 })
 </script>
 
 <template>
     <div>
-        <h2>One!</h2>
-        Included: <input type="checkbox">
+        <h2>Three</h2>
+        Max: <input type="checkbox">
     </div>
 </template>
 
 <style scoped>
 div {
-    background-color: lightgreen;
+    background-color: lightblue;
 }
 </style>

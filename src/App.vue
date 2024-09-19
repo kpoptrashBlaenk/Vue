@@ -82,6 +82,7 @@ const fallthroughItems = ['Buy apples', 'Make pizza', 'Mow the lawn']
 const fallthroughNewItem = ''
 
 const componentToggleValue = true
+const componentCompName = 'comp-one'
 
 </script>
 
@@ -103,5 +104,5 @@ const componentToggleValue = true
   <ScopedStyling />
   <SlotComp />
   <ScopedSlot />
-  <DynamicComponents :toggle-value="componentToggleValue" />
+  <DynamicComponents :toggle-value="componentToggleValue" :comp-name="componentCompName" />
 </template>
